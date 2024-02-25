@@ -1,0 +1,34 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Menu d'arrivé*/
+
+.menu{
+    height: 100vh;
+    background: #0a0a0a;
+    display: grid;
+    grid-template: 1fr/1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.section-titre{
+    background: #fafafa;
+    width: 50%;
+    height: 50vh;
+    display: grid;
+    grid-template: 65% 1fr/1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.titre{
+    font-size: 50px;
+}
+
+.start{
+    font-size: 20px;
+}
