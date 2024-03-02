@@ -1,14 +1,17 @@
-import { useState } from 'react';
 import './App.css';
 import Menu from './components/menu/menu';
+import {Route, Routes} from "react-router-dom";
+import Game from './components/game/game';
 
 function App() {
 
-  const [screen, setScreen] = useState('Start')
-
   return (
     <div className="App">
-      {screen === 'Start' && <Menu/>}
+      <Routes>
+        <Route path="/" element={<Menu/>}>
+        <Route path="/game" element={<Game/>}/>
+      </Route>
+      </Routes>
     </div>
   );
 }

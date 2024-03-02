@@ -13,16 +13,22 @@
     grid-template: 1fr/1fr;
     justify-items: center;
     align-items: center;
+    position: relative;
 }
 
 .section-titre{
     background: #fafafa;
-    width: 50%;
+    width: 30%;
     height: 50vh;
     display: grid;
-    grid-template: 65% 1fr/1fr;
+    grid-template: 1fr/1fr;
     justify-items: center;
     align-items: center;
+}
+
+.moveTitle{
+    margin-left: 20vw;
+    transition: .5s;
 }
 
 .titre{
@@ -31,4 +37,44 @@
 
 .start{
     font-size: 20px;
+}
+
+.hidden{
+    display: none;
+    color: blue;
+}
+
+.section-menu{
+    width: 20vw;
+    height: 100vh;
+    background: #fafafa;
+    position: absolute;
+    left: -20vw;
+    top: 0;
+    list-style: none;
+}
+
+.isOpen{
+    left: 0;
+    transition: .5s;
+}
+
+.section-menu nav{
+    height: inherit;
+}
+
+.section-menu ul{
+    height: inherit;
+    display: grid;
+    grid-template: repeat(3, 1fr)/1fr;
+    align-items: center;
+}
+
+.section-menu li{
+    font-size: 30px;
+}
+
+.section-menu a{
+    text-decoration: none;
+    color: black;
 }
