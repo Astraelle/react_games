@@ -1,0 +1,42 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template: 20vh 1fr/1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.gameContainer{
+    display: grid;
+    grid-template: 1fr/repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.charaContainer{
+    display: grid;
+    grid-template: repeat(3, 1fr)/1fr;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #000;
+    width: 15vw;
+}
+
+.statContainer{
+    display: grid;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    width: inherit;
+    height: 100%;
+}
+
+.statContainer p{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #000;
+}
