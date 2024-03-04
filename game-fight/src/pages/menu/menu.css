@@ -78,3 +78,7 @@
     text-decoration: none;
     color: black;
 }
+
+.menuSelected{
+    color: red !important;
+}

@@ -1,16 +1,17 @@
 import './App.css';
-import Menu from './components/menu/menu';
+import Menu from './pages/menu/menu';
 import {Route, Routes} from "react-router-dom";
-import Game from './components/game/game';
+import Game from './pages/game/game';
+import Login from './pages/login/login';
 
 function App() {
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Menu/>}>
-        <Route path="/game" element={<Game/>}/>
-      </Route>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/menu" element={<Menu/>}/>
+        <Route path="/jouer" element={<Game/>}/>
       </Routes>
     </div>
   );
