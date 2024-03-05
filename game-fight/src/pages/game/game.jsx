@@ -3,18 +3,9 @@ import './game.css'
 import * as ACTION from '../../redux/jeu'
 import { useDispatch, useSelector } from 'react-redux'
 import Data from "../../services/data.json"
+import { Link } from 'react-router-dom'
 
 const Game = () => {
-
-  const [stats, setStats] = useState({
-    name: String,
-    picture: String,
-    strenght: Number,
-    stamina: Number,
-    defense: Number,
-    speed: Number,
-    techniques: Array
-  })
 
   const store = useSelector(state => state.jeu.data);
   console.log(store);
@@ -28,11 +19,6 @@ const Game = () => {
       dispatch(ACTION.FETCH_FAILURE());
     }
   }, [])
-
-  const charaSelect = () =>{
-    setStats()
-  }
-
 
   return (
     <div className='container'>
@@ -54,7 +40,9 @@ const Game = () => {
                 <p key={id}>{techs}</p>
               )}
             </div>
-            <button>Sélectionner le personnage</button>
+            <button><Link to={{
+              pathname: `fight${perso.id}`
+            }}>Sélectionner le personnage</Link></button>
           </div>
         )}
       </div>

@@ -22,8 +22,11 @@ export const Jeu = createSlice({
             draft.error = true;
             draft.loading = false;
         },
-        FETCH_SUCCESS_ID: (draft, action) =>{
-            draft.data = action.payload.filter(value => value.id)
+        FETCH_SUCCESS_ID1: (draft, action) =>{
+            draft.data = action.payload.filter(value => value.id === 1)
+        },
+        FETCH_SUCCESS_ID2: (draft, action) =>{
+            draft.data = action.payload.filter(value => value.id === 2)
         }
     }
 })

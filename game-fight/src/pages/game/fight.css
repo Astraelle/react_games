@@ -1,0 +1,10 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fightContainer{
+    display: grid;
+    grid-template: 1fr/repeat(2, 1fr);
+}
